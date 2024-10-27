@@ -5,13 +5,13 @@ export default function Header(){
   
   const [toggle,setToggle]=  useState(false)
     return  <header className="font-bold text-black flex justify-between px-5 py-2 bg-sec">
-        <a href="#" className='text-yellow-400 font-hero-font' >KRITHIK</a>
+        <a href="#" className='text-yellow-400 font-hero-font2' >KRITHIK</a>
         <nav className="hidden md:block"> <ul className="flex text-white ">
-            <li><a href="/">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#resume">Resume</a></li>
-            <li><a href="#contacts">Contacts</a></li>
+            <li className=' hover:text-yellow-400'><a href="/">Home</a></li>
+            <li className=' hover:text-yellow-400'><a href="#about">About</a></li>
+            <li className=' hover:text-yellow-400'><a href="#projects">Projects</a></li>
+            <li className=' hover:text-yellow-400'><a href="#resume">Resume</a></li>
+            <li className=' hover:text-yellow-400'><a href="#contacts">Contacts</a></li>
         </ul>
         </nav>
 

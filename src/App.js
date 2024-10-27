@@ -18,6 +18,7 @@ function App() {
     <Resume/>
     <Contact/>
     <Footer/>
+  
     </div>
   );
 }

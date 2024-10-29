@@ -15,7 +15,7 @@ export default function Resume(){
             <p className='pb-5'>
                 You can view my resume 
                 <a 
-                    className='ml-2 px-3 py-2 bg-primary text-white rounded hover:bg-primary-dark transition duration-200' 
+                    className='ml-2 px-3 py-2 bg-primary text-white rounded btn' 
                     href={config.link} 
                     download={config.link}
                 > 

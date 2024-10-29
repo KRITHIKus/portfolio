@@ -17,8 +17,8 @@ export default function About(){
 
         <div className='md:col w-1/2 flex justify-center'> 
         <div className='flex flex-col justify-center text-white'>  
-            <h1 className='text-4xl border-b-4 border-primary mb-3 w-[170px] font-bold'>About Me</h1>
-            <p className='pb-5'> {config.line1}</p>
+            <h1 className='text-4xl border-b-4 border-primary mb-3 w-[170px] font-hero-font2'>About Me</h1>
+            <p className='pb-5 font-hero-font2 font-hero-font2'> {config.line1}</p>
             <p className='pb-5'>{config.line2} </p>
             
             <h1 className='text-4xl border-b-4 border-primary mb-3 w-[170px] font-bold'>Education</h1>
@@ -26,7 +26,7 @@ export default function About(){
             <p className='pb-5'>
   <strong>{config.line3} ({config.line4})</strong> <br/> {config.college}
   <br/> 
-  <em>{config.year} {config.on}</em>
+  <em className='font-hero-font2'>{config.year} {config.on}</em>
 </p>
 
             </div>

@@ -5,7 +5,7 @@ export default function Hero(){
 const config={
     subtitle:" I'm a Web Developer",
     hi:'hi',
-    im:"I'm ",name:"KrithiK",
+    im:"I'm ",name:"KrithiK U S",
     social:{
         reddit:'#',
         fb:'#',

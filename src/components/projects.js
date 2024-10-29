@@ -43,43 +43,35 @@ maindesc2:'These projects showcase my skills in creating fun games and building 
 
 
 
-    return <section className="flex flex-col py-20 px-10 justify-center bg-primary text-white" id='projects'>
-        <div className="w-full" >
-        <div className="flex flex-col px-10 py-5">
-<h1 className='text-4xl border-b-4 border-secondary mb-3 w-[150px] font-bold'>Projects</h1>
-<p className='font-hero-font2'>{config.maindesc}</p>
-<p className='font-hero-font2'>{config.maindesc2}</p>
-</div>
-        
-        </div>
-        <div className="w-full "> 
-        <div className='flex flex-col md:flex-row px-10   gap-8'>
-{config.project.map((project)=>( 
-    <a href={project.link}>
-    <div className='relative ' >
-    <img className='h-[200px] w-[500px]' src={project.image}/>
-    <div className='project-des'>
-    <p className='text-center  py-5 font-hero-font2 text-yellow-400' >{project.desc}</p>
-    <div className='flex justify-center'>
-    <a className='btn' target='blank' href={project.link}>View Project </a>
-</div>
- </div> 
- </div>
-
-
-
-    </a>
- ))}
-
-
-
-
-
-
-
-
-</div>
-
-        </div>
-    </section>
+    return (
+        <section className="flex flex-col py-20 px-5 justify-center bg-primary text-white" id='projects'>
+            <div className="w-full">
+                <div className="flex flex-col px-5 py-5">
+                    <h1 className='text-4xl border-b-4 border-secondary mb-3 w-[150px] font-bold'>Projects</h1>
+                    <p className='font-hero-font2'>{config.maindesc}</p>
+                    <p className='font-hero-font2'>{config.maindesc2}</p>
+                </div>
+            </div>
+            
+            <div className="w-full">
+              
+                <div className='flex flex-col sm:flex-row sm:flex-wrap justify-center gap-8 px-5'>
+                    {config.project.map((project) => (
+                        <a key={project.link} href={project.link} className='w-full sm:w-[45%] lg:w-[30%]'> 
+                            <div className='relative'>
+                                <img className='h-[200px] w-full object-cover' src={project.image} alt={project.desc} /> 
+                                <div className='project-des '>
+                                    <p className='text-center py-4 font-hero-font2 text-yellow-400 '>{project.desc}</p>
+                                    <div className='flex justify-center '>
+                                        <a className='btn' target='_blank' rel='noopener noreferrer' href={project.link}>View Project</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+    
 }

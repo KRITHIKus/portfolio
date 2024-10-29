@@ -18,7 +18,7 @@ header ul li{
   @apply fixed top-10 left-0 bg-gray-800 w-full z-50 
 }
 .mobile-nav li {
-  @apply w-full py-4  text-center border-b-2 ;
+  @apply w-full py-4  text-center border-b-2  ;
 }
 .project-des{
   @apply absolute left-0 right-0 bottom-[0px] top-0 bg-sec  opacity-0 duration-500 hover:opacity-100

@@ -1,6 +1,6 @@
 import eweb from '../assests/ecommerce-websites.jpg'
 import tic from '../assests/game.png'
-import blog from '../assests/food-ecommerce.jpg'
+import blog from '../assests/a2d.png'
 export default function Projects(){
 
 
@@ -17,9 +17,8 @@ const config={
     
             {
                 image:blog,
-                desc:'',
-                
-                link:''
+                desc:'A responsive MERN stack app with admin-only blog posting, Firebase Authentication, and user comment management, built for a modern, cross-platform experience.',              
+                link:'https://a2d-blog.onrender.com'
             },
        
     

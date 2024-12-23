@@ -2,7 +2,7 @@ import resumeimg from '../assests/resume.jpg'
 export default function Resume(){
 
     const config={
-        link:'/resume.pdf' 
+        link:'/resume1.pdf' 
     }
     return <section className='flex flex-col md:flex-row bg-sec px-5' id='resume'>
     <div className='md:w-1/2 py-5 flex justify-center md:justify-end'>

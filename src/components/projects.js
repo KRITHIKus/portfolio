@@ -1,76 +1,83 @@
-import eweb from '../assests/ecommerce-websites.jpg'
-import tic from '../assests/game.png'
-import blog from '../assests/a2d.png'
-export default function Projects(){
 
+import eweb from '../assests/ecommerce-websites.jpg';
+import blog from '../assests/a2d.png';
+import farmingAI from '../assests/Farming-ai.png';
+import { motion } from 'framer-motion';
 
-const config={
-    
-        project:[
-            {
-                image:eweb,
-                desc:'A mini e-commerce website built with React on the frontend and a minimal backend using Node.js, Express, and MongoDB. ',
+export default function Projects() {
+  const config = {
+    projects: [
+      {
+        image: eweb,
+        title: 'E-Commerce Web App',
+        desc: 'A mini e-commerce website built with React, Node.js, Express, and MongoDB, featuring cart functionality and user authentication.',
+        link: 'https://github.com/KRITHIKus/cartify.git',
+      },
+      {
+        image: blog,
+        title: 'Admin-Centric Blogging Platform',
+        desc: 'A MERN stack app with Firebase Authentication, enabling an interactive admin dashboard for content management and user engagement.',
+        link: 'https://a2d-blog.onrender.com',
+      },
+      {
+        image: farmingAI,
+        title: 'Farming AI Assistant',
+        desc: 'An AI-powered platform using Python and ML to help farmers with crop recommendations, weather predictions, and market price trends.',
+        link: 'https://farmer-ai-x2hw.onrender.com/',
+      },
+    ],
+    maindesc: 'Explore some of my key projects, ranging from AI-powered applications to full-stack web development solutions.',
+    maindesc2: 'Each project reflects my expertise in creating innovative and interactive applications with modern technologies.',
+  };
+
+  return (
+    <section className="flex flex-col py-20 px-5 justify-center bg-primary text-white" id="projects">
+      {/* Section Title */}
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="w-full text-center"
+      >
+        <h1 className="text-4xl border-b-4 border-secondary inline-block font-bold mb-5">Projects</h1>
+        <p className="font-hero-font2 text-lg">{config.maindesc}</p>
+        <p className="font-hero-font2 text-lg">{config.maindesc2}</p>
+      </motion.div>
+
+      {/* Projects Grid */}
+      <div className="w-full mt-10">
+        <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-8 px-5">
+          {config.projects.map((project, index) => (
+            <motion.a
+              key={project.link}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+              className="w-full sm:w-[45%] lg:w-[30%] transform hover:scale-105 transition-transform duration-300"
+            >
+              <div className="relative rounded-lg overflow-hidden shadow-lg group">
+                {/* Project Image */}
+                <img className="h-[220px] w-full object-cover transform group-hover:scale-110 transition duration-500" src={project.image} alt={project.title} />
                 
-                link:'https://github.com/KRITHIKus/cartify.git'
-            },
-        
-    
-            {
-                image:blog,
-                desc:'A responsive MERN stack app with admin-only blog posting, Firebase Authentication, and user comment management, built for a modern, cross-platform experience.',              
-                link:'https://a2d-blog.onrender.com'
-            },
-       
-    
-
-            {
-                image:tic,
-                desc:'A classic Tic Tac Toe game built with JavaScript, HTML, and CSS. Simple engaging, and fun for quick play!',
-                
-                link:'https://github.com/KRITHIKus/tic-tac-toe.git'
-            }
-        
-        ],
-        maindesc:'My portfolio features a range of web projects, including a Tic Tac Toe game built with HTML, CSS, and JavaScript, and a mini e-commerce site using React, Node.js, Express, and MongoDB.',
-maindesc2:'These projects showcase my skills in creating fun games and building interactive websites with both frontend and backend functionality.'
-    }
-
-
-
-
-
-
-
-
-    return (
-        <section className="flex flex-col py-20 px-5 justify-center bg-primary text-white" id='projects'>
-            <div className="w-full">
-                <div className="flex flex-col px-5 py-5">
-                    <h1 className='text-4xl border-b-4 border-secondary mb-3 w-[150px] font-bold'>Projects</h1>
-                    <p className='font-hero-font2'>{config.maindesc}</p>
-                    <p className='font-hero-font2'>{config.maindesc2}</p>
+                {/* Hover Overlay */}
+                <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-4 text-center">
+                  <h2 className="text-xl font-bold text-yellow-400">{project.title}</h2>
+                  <p className="text-sm text-gray-300 mt-2">{project.desc}</p>
+                  <a
+                    className="mt-4 px-4 py-2 bg-secondary text-white rounded-lg hover:bg-yellow-500 transition duration-300"
+                    href={project.link}
+                  >
+                    View Project
+                  </a>
                 </div>
-            </div>
-            
-            <div className="w-full">
-              
-                <div className='flex flex-col sm:flex-row sm:flex-wrap justify-center gap-8 px-5'>
-                    {config.project.map((project) => (
-                        <a key={project.link} href={project.link} className='w-full sm:w-[45%] lg:w-[30%]'> 
-                            <div className='relative'>
-                                <img className='h-[200px] w-full object-cover' src={project.image} alt={project.desc} /> 
-                                <div className='project-des '>
-                                    <p className='text-center py-4 font-hero-font2 text-yellow-400 '>{project.desc}</p>
-                                    <div className='flex justify-center '>
-                                        <a className='btn' target='_blank' rel='noopener noreferrer' href={project.link}>View Project</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
-    
+              </div>
+            </motion.a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }

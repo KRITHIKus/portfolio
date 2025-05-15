@@ -32,7 +32,7 @@ import resumeimg from '../assests/resume.jpg';
 
 export default function Resume() {
     const config = {
-        link: '/resume1.pdf'
+        link: '/RESUME.pdf'
     };
 
     return (

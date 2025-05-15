@@ -1,5 +1,5 @@
 
-import eweb from '../assests/ecommerce-websites.jpg';
+import bullseye from '../assests/bullseye.png';
 import blog from '../assests/a2d.png';
 import farmingAI from '../assests/Farming-ai.png';
 import { motion } from 'framer-motion';
@@ -8,10 +8,10 @@ export default function Projects() {
   const config = {
     projects: [
       {
-        image: eweb,
-        title: 'E-Commerce Web App',
-        desc: 'A mini e-commerce website built with React, Node.js, Express, and MongoDB, featuring cart functionality and user authentication.',
-        link: 'https://github.com/KRITHIKus/cartify.git',
+        image: bullseye,
+        title: 'Bullseye–URL Safety Scanner',
+        desc: 'A modern cybersecurity tool that detects malicious URLs using real-time threat analysis and intelligent crawling.',
+        link: 'https://bullseye-n9jz.onrender.com/',
       },
       {
         image: blog,

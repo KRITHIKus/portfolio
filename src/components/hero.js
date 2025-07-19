@@ -1,5 +1,5 @@
 import Heroimg from "../assests/hero.png";
-import { AiOutlineReddit, AiOutlineFacebook, AiOutlineLinkedin } from "react-icons/ai";
+import { AiOutlineReddit, AiOutlineFacebook, AiOutlineLinkedin, AiOutlineGithub } from "react-icons/ai";
 import { SiLeetcode } from "react-icons/si";
 import { ReactTyped } from "react-typed";
 import { motion } from "framer-motion";
@@ -11,7 +11,7 @@ export default function Hero() {
     name: "Krithik U S",
     social: {
       reddit: "#",
-      fb: "#",
+      github: "https://github.com/KRITHIKus",
       leet: "https://leetcode.com/krithikus/",
       linkedin: "https://www.linkedin.com/in/krithik-u-s-a545a4326/",
     },
@@ -57,8 +57,8 @@ export default function Hero() {
           <a href={config.social.reddit} className="hover:text-yellow-400 transition-all duration-300">
             <AiOutlineReddit size={40} />
           </a>
-          <a href={config.social.fb} className="hover:text-yellow-400 transition-all duration-300">
-            <AiOutlineFacebook size={40} />
+          <a href={config.social.github} className="hover:text-yellow-400 transition-all duration-300">
+            <AiOutlineGithub size={40} />
           </a>
           <a href={config.social.linkedin} className="hover:text-yellow-400 transition-all duration-300">
             <AiOutlineLinkedin size={40} />

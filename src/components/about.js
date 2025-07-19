@@ -53,7 +53,7 @@ export default function About() {
     educationTitle: "Education",
     degree: "Bachelor of Computer Applications (BCA)",
     college: "East Point College of Higher Education",
-    year: "3rd Year (Ongoing)",
+    year: "2022 - 2025",
   };
 
   return (
@@ -90,7 +90,7 @@ export default function About() {
         <p className="pb-5 text-gray-300 font-hero-font2">
           <strong>{config.degree}</strong> <br />
           {config.college} <br />
-          <em className="text-gray-400 font-hero-font2">{config.year}</em>
+          <p className="text-gray-400 font-hero-font2">{config.year}</p>
         </p>
       </motion.div>
 
